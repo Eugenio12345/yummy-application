@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+      "target": "http://ws-service-yummy-friendly-roan-fn.cfapps.io",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+  }

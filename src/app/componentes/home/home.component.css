@@ -1,0 +1,49 @@
+:root{
+    --color-pink: #2f3d41;
+    --color-light: #ffffff;
+    --color-gold: #111111;
+}
+body{
+    font-family:'Oswald', sans-serif;
+    font-weight: 200;
+  background-image: url(https://img.freepik.com/foto-gratis/diverso-sabor-helado-disposicion-conos-fondo-blanco-diseno-menu-dulces_35641-226.jpg?size=626&ext=jpg);
+  background-size: cover; 
+  letter-spacing: .05rem;
+    background-repeat: no-repeat;
+    height: 60%;
+}
+.lead-xl{
+    font-size: 1.5rem;
+}
+.nav-link{
+    margin-left:2rem;
+
+}
+.sideways{
+    writing-mode: vertical-lr;
+    display: block;
+    margin: 3.5rem 0;
+    transform: rotate(-180deg);
+}
+.btn-primary{
+    background-color: transparent;
+    border: 1px solid var(--color-light);
+    border-radius: 0;
+    color: var(--color-light);
+    padding: .5rem 2.5rem;
+    font-size: 1.25rem;
+}
+.btn-primary:hover{
+    background-color: var(--color-light);
+    color: black;
+    border:1px solid var(--color-light);
+}
+.color{
+    color: black;
+}
+.logo{
+    width: 60%;
+    height: 60%;
+    margin-left: 80px;
+  
+}

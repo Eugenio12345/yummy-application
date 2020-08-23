@@ -1,0 +1,46 @@
+
+body {
+  
+
+    font-family:'Oswald', sans-serif;
+    font-weight: 200;
+    background-image: url(https://heladosano.com/wp-content/uploads/2019/02/helados-de-frutas-saludables-1080x675.jpg);
+    background-size: cover; 
+    letter-spacing: .05rem;
+    background-repeat: no-repeat;
+    height: 60%;
+}
+.main-section{
+   margin: 0 auto;
+   margin-top: 0%;
+   padding: 0;
+}
+.modal-content{
+   background-color: #3b4652;
+   opacity: .70;
+   padding: 0 30px;
+   box-shadow: 0px 0px 5px #848484;
+}
+.user-img{
+    margin-top: 100px;
+    margin-bottom: 43px;
+}
+.user-img img{
+   width: 100px;
+   height: 100px;
+   box-shadow: 0px 0px 5px #848484;
+   border-radius: 50%;
+}
+
+.form-group input{
+   height: 40px;
+   font-size: 19px;
+   border: 0;
+   color: black;
+}
+
+p{
+   color: whitesmoke;
+   font-size: 20px;
+   margin-bottom: 13px;
+}

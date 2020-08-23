@@ -1,0 +1,30 @@
+<html>
+ <body>
+ <main>
+  <div>
+    <h3 id="hPerfiles">Perfiles Registrados</h3>
+  </div>
+  
+   <div id="principal" class="container">
+    <table class="table table-striped  table-sm row-border hover"  id="myTable">
+      <thead class="table-dark" >
+        <tr>
+          <th *ngFor="let columna of columnas">
+            {{columna}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios ">
+          <td>{{usuario.idUsuario}}</td>
+          <td>{{usuario.nombre}}</td>
+          <td>{{usuario.apellidosUsuario}}</td>
+          <td>{{usuario.nombreUsuario}}</td>
+          <td><a class="btn btn-outline-danger" href="/user-home" (click)="eliminarDatos(usuario.idUsuario)">Eliminar</a></td>
+        </tr>
+      </tbody>
+    </table>
+   </div>
+  </main>
+ </body>
+</html>

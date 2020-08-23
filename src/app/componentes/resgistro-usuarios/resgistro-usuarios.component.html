@@ -1,0 +1,39 @@
+<body>
+    <div class="modal-dialog">
+        <div class="col-sm-12 main-section" >
+           <div class="modal-content">
+               <div  class="col-12 user-img"  align="center" >
+                   <img src="https://img2.freepng.es/20180703/ya/kisspng-computer-icons-user-avatar-user-5b3bafe2381423.1933594815306383062297.jpg">
+               </div>
+                 
+                    <form class="col-12" [formGroup]="registroForm" (ngSubmit)="guardarUsuario(registroForm.value)"> 
+                   <div class="form-group">
+                       <p>Nombre</p>
+                       <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Ingresar nombre" formControlName="nombre" ng-model="nombre">
+   
+                   </div>
+                   <div class="form-group">
+                       <p>Apellido</p>
+                       <input class="form-control" type="text" name="apellido" id="apellido" placeholder="Ingresar apellido" formControlName="apellidosUsuario" ng-model="apellidosUsuario">
+                   </div>
+                   <div class="form-group">
+                    <p>Usuario</p>
+                    <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Ingresa tu usuario" formControlName="nombreUsuario" ng-model="nombreUsuario">
+                </div>
+
+                   <div class="form-group">
+                    <p>Contraseña</p>
+                    <input class="form-control" type="password" name="contranseña" id="contranseña" placeholder="Ingresa tu contraseña" formControlName="contrasenna" ng-model="contrasenna">
+                </div>
+            
+                <div align="center"> 
+                    <button type="submit" class="btn btn-success">Registrar</button>
+                </div>
+    
+               </form>
+           </div>
+        </div>
+       </div>
+</body>
+
+
