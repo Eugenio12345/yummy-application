@@ -11,7 +11,7 @@ export class FormService {
     providedIn: 'root'
   })
 
-    
+    urlGlobal = 'http://ws-service-yummy-friendly-roan-fn.cfapps.io';
     urlGuardarProducto = '/api/productos/save';
     urlConsultarProducto = '/api/productos/consultar';
     urlEliminarProducto= '/api/productos/eliminar/';
@@ -29,16 +29,16 @@ export class FormService {
   }
 
  guardarProducto(productos){
-  return this.http.post(this.urlGuardarProducto,productos,this.httpOptions);
+  return this.http.post(this.urlGlobal+this.urlGuardarProducto,productos,this.httpOptions);
  }
 
  
  obtenerProductos(): Observable<Producto[]>{
-  return this.http.get<Producto[]>(this.urlConsultarProducto);
+  return this.http.get<Producto[]>(this.urlGlobal+this.urlConsultarProducto);
 }
 
 eliminarDatos(idProducto: number){
-  return this.http.delete(this.urlEliminarProducto+idProducto, this.httpOptions);
+  return this.http.delete(this.urlGlobal+this.urlEliminarProducto+idProducto, this.httpOptions);
 }
 
 

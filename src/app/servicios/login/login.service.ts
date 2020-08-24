@@ -8,6 +8,7 @@ import {Usuario} from '../../componentes/modelo/Usuario';
 })
 export class LoginService {
   
+  urlGlobal = 'http://ws-service-yummy-friendly-roan-fn.cfapps.io';
   urlValidaUsuario = '/api/usuarios/save';
   urlConsultarUsuario = '/api/usuarios/consultar';
   urlEliminar = '/api/usuarios/eliminar/';
@@ -22,19 +23,19 @@ export class LoginService {
   }
   validaLogin(login){
     
-    return this.http.post(this.urlValidaUsuario,login,this.httpOptions);
+    return this.http.post(this.urlGlobal+this.urlValidaUsuario,login,this.httpOptions);
  }
 
  guardarUsuario(usuario){
-  return this.http.post(this.urlValidaUsuario,usuario,this.httpOptions);
+  return this.http.post(this.urlGlobal+this.urlValidaUsuario,usuario,this.httpOptions);
  }
 
  obtenerUsuarios(): Observable<Usuario[]>{
-  return this.http.get<Usuario[]>(this.urlConsultarUsuario);
+  return this.http.get<Usuario[]>(this.urlGlobal+this.urlConsultarUsuario);
 }
 
 eliminarDatos(idUser: number){
-  return this.http.delete(this.urlEliminar+idUser, this.httpOptions);
+  return this.http.delete(this.urlGlobal+this.urlEliminar+idUser, this.httpOptions);
 }
 
 }
