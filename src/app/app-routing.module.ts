@@ -7,7 +7,7 @@ import { UserHomeComponent} from './componentes/user-home/user-home.component';
 import { RegistrarProductoComponent } from './componentes/registrar-producto/registrar-producto.component';
 import { ProductHomeComponent } from './componentes/product-home/product-home.component';
 import { MuestraProductoComponent } from './componentes/muestra-producto/muestra-producto.component';
-
+import { VistaProductoComponent } from './componentes/vista-producto/vista-producto.component'
 
 const routes: Routes = [
   {path : 'login', component: LoginComponent },
@@ -17,6 +17,7 @@ const routes: Routes = [
   {path : 'registrar-producto', component: RegistrarProductoComponent},
   {path : 'product-home', component: ProductHomeComponent},
   {path : 'muestra-producto', component: MuestraProductoComponent},
+  {path : 'vista-producto', component: VistaProductoComponent },
   {path : '', redirectTo: '/home', pathMatch: 'full'}
 ];
 

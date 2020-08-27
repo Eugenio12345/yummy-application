@@ -28,7 +28,7 @@ export class UserHomeComponent implements OnInit {
     );
   }
   eliminarDatos(idUser: number){
-    console.log('invocanndo metodo')
+    console.log('invocanndo metodo '+idUser)
     this.loginService.eliminarDatos(idUser).subscribe(
       exito=>{
           console.log('Eliminado con exito')

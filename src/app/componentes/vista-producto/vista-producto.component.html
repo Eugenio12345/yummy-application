@@ -1,0 +1,14 @@
+<body>
+    <section id="galeria" class="container">
+        <div class="text-center pt-5">
+            <h1>Heladeria YUMMY</h1>
+        </div>
+        <div class="row" >
+            <div class="col-lg-4" *ngFor="let producto of productos" >
+                <img src="{{'data:image/jpg;base64,' + producto.imagenProducto}}" alt="Galeria">
+                <p style = "text-transform:capitalize;font-weight: bold">{{producto.nombre}}</p>
+                <button class="btn btn-outline-success">Comprar</button><input type="number" placeholder="Ingresar la cantidad">
+            </div>
+        </div>
+    </section>
+  </body>

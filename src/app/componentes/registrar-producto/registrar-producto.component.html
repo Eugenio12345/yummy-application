@@ -13,7 +13,13 @@
                    <div class="form-group">
                        <p>Precio</p>
                        <input class="form-control" type="text" name="precio" id="precio" placeholder="Ingresar precio" formControlName="precio" ng-model="precio">
+                    
                    </div>
+                   <div class="custom-file">
+                    <p>Imagen</p>
+                    <input formControlName = "imagenProducto" ng-model="imagenProducto" type="file"  (change)="imageChange($event)" class="custom-file-input" id="inputGroupFile01">
+                    <label class="custom-file-label" for="inputGroupFile01">Ingresar imagen</label>
+                  </div>
                 <div align="center"> 
                     <button type="submit" class="btn btn-success">Registrar</button>
                 </div>

@@ -38,7 +38,10 @@ export class FormService {
 }
 
 eliminarDatos(idProducto: number){
-  return this.http.delete(this.urlGlobal+this.urlEliminarProducto+idProducto, this.httpOptions);
+  
+  var urlEliminaTemp = this.urlGlobal+this.urlEliminarProducto+idProducto;
+  console.log(urlEliminaTemp)
+  return this.http.delete(urlEliminaTemp.toString(), this.httpOptions);
 }
 
 

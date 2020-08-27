@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import {FormService} from '../../servicios/form/form.service';
+import { UtileriasService } from 'src/app/utilerias/utilerias.service';
+
 
 @Component({
   selector: 'app-registrar-producto',
@@ -12,17 +14,20 @@ export class RegistrarProductoComponent implements OnInit {
 
 
   registroForm : FormGroup;
-
-  constructor(private patterBuilder: FormBuilder, private router: Router,private formService : FormService) { 
+  sellersPermitString: String;
+  constructor(private patterBuilder: FormBuilder, private router: Router,private formService : FormService, private utileriasService: UtileriasService) { 
     this.registroForm = this.patterBuilder.group({
       nombre:'',
-      precio:''
+      precio:'',
+      imagenProducto:''
     })
     
   }
   ngOnInit(): void {
   }
     guardarProducto(producto){
+      this.sellersPermitString = this.utileriasService.getImage();
+      producto.imagenProducto = this.sellersPermitString;
     this.formService.guardarProducto(producto).subscribe(exito=>{
       this.router.navigateByUrl('/product-home')
     }
@@ -32,5 +37,9 @@ export class RegistrarProductoComponent implements OnInit {
     }
     
     )
+    }
+    imageChange(image){
+      this.utileriasService.imageChangeUtils(image);
+      
     }
   }

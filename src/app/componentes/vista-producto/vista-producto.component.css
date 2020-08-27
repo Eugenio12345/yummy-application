@@ -1,0 +1,25 @@
+body{
+    background-image: url(https://i.pinimg.com/originals/ba/4d/1d/ba4d1d698bf5e1e5b942cb771f8064cd.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+#galeria .col-lg-4{
+    margin: 0 !important;
+    padding: 25px;
+}
+#galeria img{
+    width: 100%;
+    height: 250px;
+}
+#galeria img:hover{
+    border: 5px solid #f7f7f7;
+}
+
+#galeria h1{
+    color: rgb(253, 253, 253);
+    background-color: #242a31;
+    opacity: .90;
+    padding: 0 30px;
+    box-shadow: 0px 0px 10px #494949;
+}
