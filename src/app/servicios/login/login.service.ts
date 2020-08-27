@@ -8,7 +8,7 @@ import {Usuario} from '../../componentes/modelo/Usuario';
 })
 export class LoginService {
   
-  urlGlobal = 'http://localhost:8080';
+  urlGlobal = 'http://ws-service-yummy-friendly-roan-fn.cfapps.io';
   urlGuardarUsuario = '/api/usuarios/save';
   urlConsultarUsuario = '/api/usuarios/consultar';
   urlEliminar = '/api/usuarios/eliminar/';
