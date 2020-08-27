@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
   validaUsuario(usuario: Usuario){
      if(usuario.nombreUsuario==null && usuario.contrasenna==null){
       this.router.navigateByUrl('/login')
-     }else if(usuario.nombreUsuario=='admin' && usuario.contrasenna=='admin'){
+     }else if(usuario.nombreUsuario!= null && usuario.contrasenna!=null && usuario.rol=='admin'){
        console.log('/user-home')
      }else{
       this.router.navigateByUrl('/vista-producto')
